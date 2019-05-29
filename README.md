@@ -1,5 +1,7 @@
 ## Data for SME Virtual Network Open Source Projects
 
+[![Build Status](https://dev.azure.com/smevirtual/OpenSourceProjectData/_apis/build/status/smevirtual.OpenSourceProjectData?branchName=master)](https://dev.azure.com/smevirtual/OpenSourceProjectData/_build/latest?definitionId=1&branchName=master)
+
 Contains the data for [smevirtual.github.io](https://smevirtual.github.io/), a web
 application that lists all of the open source projects (software or hardware) that the SME Virtual Network is currently maintaining, supporting and developing.
 
