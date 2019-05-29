@@ -1,0 +1,57 @@
+{
+  "$id": "https://smevirtual.com/os-projects.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of an open source project.",
+  "type": "array",
+  "required": [
+    "id",
+    "name",
+    "description",
+    "repo_url",
+    "website_url",
+    "organization_name",
+    "organization_logo_url",
+    "category"
+  ],
+  "definitions": {
+    "categories": {
+      "enum": ["Infrastructure", "Hardware", "Additive Manufacturing", "Automation and Robotics", "Education"],
+      "type": "string"
+    },
+    "url": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "items": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "name": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "repo_url": {
+        "$ref": "#/definitions/url"
+      },
+      "website_url": {
+        "$ref": "#/definitions/url"
+      },
+      "organization_name": {
+        "type": "string"
+      },
+      "organization_logo_url": {
+        "$ref": "#/definitions/url"
+      },
+      "category": {
+        "$ref": "#/definitions/categories"
+      }
+    }
+  }
+}
